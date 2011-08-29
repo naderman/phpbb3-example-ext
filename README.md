@@ -1,6 +1,7 @@
-## Example Extension
+# Example Extension
 
-# Installation
+## Installation
+
 Clone into phpBB/ext/example:
 
     git clone https://github.com/naderman/phpbb3-example-ext.git phpBB/ext/example
