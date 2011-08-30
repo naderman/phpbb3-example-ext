@@ -595,7 +595,7 @@ class phpbb_ext_example_acp_example_module
 			trigger_error($user->lang['CONFIG_UPDATED'] . adm_back_link($this->u_action));
 		}
 
-		$this->tpl_name = 'acp_board';
+		$this->tpl_name = 'acp_example';
 		$this->page_title = $display_vars['title'];
 
 		$template->assign_vars(array(
