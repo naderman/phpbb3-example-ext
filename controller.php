@@ -44,7 +44,7 @@ class phpbb_ext_example_controller implements phpbb_extension_controller_interfa
 			'body' => 'foobar_body.html'
 		));
 
-		$this->template->assign_var('MESSAGE' => $this->get_message());
+		$this->template->assign_var('MESSAGE', $this->get_message());
 
 		$this->template->display('body');
 	}
