@@ -36,7 +36,7 @@ class phpbb_ext_example_controller implements phpbb_extension_controller_interfa
 		$this->template = $template;
 		$this->request = $request;
 
-		$this->user->add_lang_ext('foobar', 'foobar');
+		$this->user->add_lang_ext('example', 'foobar');
 
 		$this->template->set_ext_dir_prefix($phpbb_root_path . 'ext/foobar/');
 
@@ -46,7 +46,8 @@ class phpbb_ext_example_controller implements phpbb_extension_controller_interfa
 
 		$this->template->assign_var('MESSAGE', $this->get_message());
 
-		$this->template->display('body');
+		page_header('WELCOME_TO_FOOBAR');
+		page_footer();
 	}
 
 	/**
