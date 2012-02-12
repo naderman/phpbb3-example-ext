@@ -38,7 +38,7 @@ class phpbb_ext_example_controller implements phpbb_extension_controller_interfa
 
 		$this->user->add_lang_ext('example', 'foobar');
 
-		$this->template->set_ext_dir_prefix($phpbb_root_path . 'ext/foobar/');
+		$this->template->set_ext_dir_prefix($phpbb_root_path . 'ext/example/');
 
 		$this->template->set_filenames(array(
 			'body' => 'foobar_body.html'
