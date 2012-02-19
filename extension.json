@@ -1,0 +1,43 @@
+{
+	"name": "naderman/example",
+	"type": "phpbb3-extension",
+	"description": "An example/sample extension to be used for testing purposes in phpBB Development.",
+	"homepage": "https://github.com/naderman/phpbb3-example-ext",
+	"version": "1.0.0",
+	"time": "2012-02-15",
+	"licence": "GNU GPL v2",
+	"authors": [{
+			"name": "Nils Aderman",
+			"username": "naderman",
+			"email": "naderman@naderman.de",
+			"homepage": "http://naderman.de",
+			"type": "Lead Developer"
+		},  
+		{
+			"name": "David King",
+			"username": "imkingdavid",
+			"email": "imkingdavid@gmail.com",
+			"homepage": "http://thedavidking.com",
+			"type": "Contributor"
+		}
+		{
+			"name": "Igor Wiedler",
+			"username": "igorw",
+			"email": "igor@wiedler.ch",
+			"type": "Contributor"
+		}
+		{
+			"name": "Michael Cullum",
+			"username": "Unknown Bliss",
+			"email": "m@michaelcullum.com",
+			"homepage": "http://michaelcullum.com",
+			"type": "Contributor"
+		}],
+	"require": {
+		"php": ">=5.4",
+		"phpbb": "3.1.0"
+	},
+	"extra": {
+		"display-name": "phpBB Example Extension"
+	}
+}
