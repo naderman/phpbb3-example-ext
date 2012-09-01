@@ -2,9 +2,9 @@
 
 ## Installation
 
-Clone into phpBB/ext/example:
+Clone into phpBB/ext/naderman/example:
 
-    git clone https://github.com/naderman/phpbb3-example-ext.git phpBB/ext/example
+    git clone https://github.com/naderman/phpbb3-example-ext.git phpBB/ext/naderman/example
 
 Enable in database by inserting a row into phpbb_ext
 
