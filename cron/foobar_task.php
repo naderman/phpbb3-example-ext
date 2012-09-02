@@ -1,6 +1,6 @@
 <?php
 
-class phpbb_ext_example_cron_foobar_task extends phpbb_cron_task_base
+class phpbb_ext_naderman_example_cron_foobar_task extends phpbb_cron_task_base
 {
     public function run()
     {
