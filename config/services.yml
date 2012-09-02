@@ -1,0 +1,8 @@
+services:
+    cron.task.example.foobar:
+        class: phpbb_ext_naderman_example_cron_foobar_task
+        arguments:
+            - %core.root_path%
+            - @user
+        tags:
+            - { name: cron.task }
