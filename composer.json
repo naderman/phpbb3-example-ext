@@ -35,7 +35,7 @@
 		}],
 	"require": {
 		"php": ">=5.4",
-		"phpbb": "3.1.0"
+		"phpbb": "3.1.0-dev"
 	},
 	"extra": {
 		"display-name": "phpBB Example Extension"

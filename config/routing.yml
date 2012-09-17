@@ -1,0 +1,19 @@
+main_controller:
+    pattern: /example
+    # The first part of the controller default is the service name
+    # If it contains a colon, the part after the colon will be
+    # treated as a method name that is within the controller
+    # service. If no method is specified, it uses the handle()
+    # method.
+    defaults: { _controller: example.controller.main }
+
+foo_controller:
+    pattern: /example/{test}
+    # The foo() method of the given service must have one parameter
+    # named $test. It may contain other parameters if they have
+    # a default value given.
+    defaults: { _controller: example.controller.main:foo }
+
+bar_controller:
+    pattern: /ex/{test}
+    defaults: { _controller: example.controller.main:bar, test: foo }
