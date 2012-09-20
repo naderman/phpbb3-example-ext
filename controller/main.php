@@ -3,7 +3,7 @@
 // This is required for all controllers
 use Symfony\Component\HttpFoundation\Response;
 
-class phpbb_ext_naderman_example_controller_main implements phpbb_controller_interface
+class phpbb_ext_naderman_example_controller_main extends phpbb_controller_base
 {
 	/**
 	* Constructor
@@ -31,7 +31,7 @@ class phpbb_ext_naderman_example_controller_main implements phpbb_controller_int
 	*/
 	public function handle()
 	{
-		return new Response('handle() method called', 200);
+		trigger_error('handle() method called');
 	}
 
 	/**
@@ -45,10 +45,10 @@ class phpbb_ext_naderman_example_controller_main implements phpbb_controller_int
 	{
 		if (empty($test))
 		{
-			return new Reponse('foo method called, but no value was given for $test. A 404, "Not Found", response was sent.', 404);
+			trigger_error('foo() method called, but no value was given for $test. A 404, "Not Found", response was sent.');
 		}
 
-		return new Response('foo() method called. The value of $test is <pre>' . $test . '</pre>.', 200);
+		trigger_error('foo() method called. The value of $test is <pre>' . $test . '</pre>.');
 	}
 
 	/**
@@ -70,8 +70,6 @@ class phpbb_ext_naderman_example_controller_main implements phpbb_controller_int
 			'body'	=> 'foobar_body.html',
 		));
 
-		page_footer(true, false);
-
-		return new Response('', 200);
+		return new Response($this->render_template('body'), 200);
 	}
 }
