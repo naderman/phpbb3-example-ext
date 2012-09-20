@@ -70,6 +70,8 @@ class phpbb_ext_naderman_example_controller_main extends phpbb_controller_base
 			'body'	=> 'foobar_body.html',
 		));
 
+		page_footer(true, false, false);
+
 		return new Response($this->render_template('body'), 200);
 	}
 }
