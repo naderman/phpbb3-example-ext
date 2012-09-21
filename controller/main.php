@@ -3,7 +3,7 @@
 // This is required for all controllers
 use Symfony\Component\HttpFoundation\Response;
 
-class phpbb_ext_naderman_example_controller_main extends phpbb_controller_base
+class phpbb_ext_naderman_example_controller_main implements phpbb_controller_interface
 {
 	/**
 	* Constructor
@@ -21,6 +21,8 @@ class phpbb_ext_naderman_example_controller_main extends phpbb_controller_base
 		$this->user = $user;
 		$this->template = $template;
 		$this->db = $db;
+
+		$this->helper = new phpbb_controller_helper($template);
 	}
 
 	/**
@@ -72,6 +74,6 @@ class phpbb_ext_naderman_example_controller_main extends phpbb_controller_base
 
 		page_footer(true, false, false);
 
-		return new Response($this->render_template('body'), 200);
+		return new Response($this->helper->render_template('body'), 200);
 	}
 }
