@@ -14,15 +14,15 @@ class phpbb_ext_naderman_example_controller_main implements phpbb_controller_int
 	* @param phpbb_user $user User object
 	* @param phpbb_template $template Template object
 	* @param dbal $db DBAL object
+	* @param phpbb_controller_helper $helper Controller helper object
 	*/
-	public function __construct(phpbb_request $request, phpbb_user $user, phpbb_template $template, dbal $db)
+	public function __construct(phpbb_request $request, phpbb_user $user, phpbb_template $template, dbal $db, phpbb_controller_helper $helper)
 	{
 		$this->request = $request;
 		$this->user = $user;
 		$this->template = $template;
 		$this->db = $db;
-
-		$this->helper = new phpbb_controller_helper($template);
+		$this->helper = $helper;
 	}
 
 	/**

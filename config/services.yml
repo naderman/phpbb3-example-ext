@@ -7,3 +7,4 @@ services:
             - @user
             - @template
             - @dbal.conn
+            - @controller.helper
