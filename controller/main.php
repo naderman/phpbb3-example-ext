@@ -1,8 +1,5 @@
 <?php
 
-// This is required for all controllers
-use Symfony\Component\HttpFoundation\Response;
-
 class phpbb_ext_naderman_example_controller_main implements phpbb_controller_interface
 {
 	/**
@@ -74,6 +71,6 @@ class phpbb_ext_naderman_example_controller_main implements phpbb_controller_int
 
 		page_footer(true, false, false);
 
-		return new Response($this->helper->render_template('body'), 200);
+		return $this->helper->render_template('body');
 	}
 }
