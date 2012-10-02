@@ -63,14 +63,6 @@ class phpbb_ext_naderman_example_controller_main implements phpbb_controller_int
 
 		$this->template->assign_var('MESSAGE', 'Hi, ' . $this->user->data['username'] . '! The bar() method was called from the main example controller.');
 
-		page_header('Example extension bar() method');
-
-		$this->template->set_filenames(array(
-			'body'	=> 'foobar_body.html',
-		));
-
-		page_footer(true, false, false);
-
-		return $this->helper->render_template('body');
+		return $this->helper->render('foobar_body.html', 'Example extension bar() method');
 	}
 }
