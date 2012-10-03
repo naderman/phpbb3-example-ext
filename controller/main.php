@@ -30,7 +30,7 @@ class phpbb_ext_naderman_example_controller_main implements phpbb_controller_int
 	*/
 	public function handle()
 	{
-		trigger_error('handle() method called');
+		return $this->helper->error('I am the handle() method', 404);
 	}
 
 	/**
@@ -44,10 +44,10 @@ class phpbb_ext_naderman_example_controller_main implements phpbb_controller_int
 	{
 		if (empty($test))
 		{
-			trigger_error('foo() method called, but no value was given for $test. A 404, "Not Found", response was sent.');
+			return $this->helper->error('foo() method called, but no value was given for $test. A 404, "Not Found", response was sent.', 404);
 		}
 
-		trigger_error('foo() method called. The value of $test is <pre>' . $test . '</pre>.');
+		return $this->helper->error('foo() method called. The value of $test is <pre>' . $test . '</pre>.', 404);
 	}
 
 	/**
