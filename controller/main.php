@@ -30,7 +30,16 @@ class phpbb_ext_naderman_example_controller_main implements phpbb_controller_int
 	*/
 	public function handle()
 	{
-		return $this->helper->error('I am the handle() method', 404);
+		if ($this->user->data['user_id'] === ANONYMOUS)
+		{
+			return $this->helper->error(401, 'You must login to access this page.');
+		}
+
+		$this->template->assign_vars(array(
+			'MESSAGE'	=> 'I am the handle() method',
+		));
+
+		return $this->helper->render('foobar_body.html', 'handle()', 200);
 	}
 
 	/**
@@ -44,10 +53,14 @@ class phpbb_ext_naderman_example_controller_main implements phpbb_controller_int
 	{
 		if (empty($test))
 		{
-			return $this->helper->error('foo() method called, but no value was given for $test. A 404, "Not Found", response was sent.', 404);
+			return $this->helper->error(404, 'foo() method called, but no value was given for $test. A 404, "Not Found", response was sent.');
 		}
 
-		return $this->helper->error('foo() method called. The value of $test is <pre>' . $test . '</pre>.', 404);
+		$template->assign_vars(array(
+			'MESSAGE'	=> 'foo() method called. The value of $test is <pre>' . $test . '</pre>.',
+		));
+
+		return $this->helper->render('foobar_body.html', 'foo()');
 	}
 
 	/**
@@ -61,8 +74,10 @@ class phpbb_ext_naderman_example_controller_main implements phpbb_controller_int
 	{
 		$this->user->add_lang_ext('naderman/example', 'foobar');
 
-		$this->template->assign_var('MESSAGE', 'Hi, ' . $this->user->data['username'] . '! The bar() method was called from the main example controller.');
+		$this->template->assign_vars(array(
+			'MESSAGE'	=> $this->user->lang('WELCOME_MESSAGE', $this->user->data['username']),
+		));
 
-		return $this->helper->render('foobar_body.html', 'Example extension bar() method');
+		return $this->helper->render('foobar_body.html', $this->user->lang('WELCOME_TO_FOOBAR'));
 	}
 }
