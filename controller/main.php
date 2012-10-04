@@ -56,7 +56,7 @@ class phpbb_ext_naderman_example_controller_main implements phpbb_controller_int
 			return $this->helper->error(404, 'foo() method called, but no value was given for $test. A 404, "Not Found", response was sent.');
 		}
 
-		$template->assign_vars(array(
+		$this->template->assign_vars(array(
 			'MESSAGE'	=> 'foo() method called. The value of $test is <pre>' . $test . '</pre>.',
 		));
 
