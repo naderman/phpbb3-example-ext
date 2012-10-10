@@ -1,8 +1,9 @@
 foo_controller:
     pattern: /example/{test}
     # The foo() method of the given service must have one parameter
-    # named $test. It may contain other parameters if they have
-    # a default value given.
+    # named $test. A value for test must be given for the URL to match
+    # The method may contain other parameters if they have a default value
+    # given.
     defaults: { _controller: example.controller.main:foo }
 
 bar_controller:

@@ -23,26 +23,6 @@ class phpbb_ext_naderman_example_controller_main
 	}
 
 	/**
-	* Default controller method to be called if no other method is given.
-	* In our case, it is accessed when the URL is /example
-	*
-	* @return Symfony\Component\HttpFoundation\Response A Symfony Response object
-	*/
-	public function handle()
-	{
-		if ($this->user->data['user_id'] === ANONYMOUS)
-		{
-			return $this->helper->error(401, 'You must login to access this page.');
-		}
-
-		$this->template->assign_vars(array(
-			'MESSAGE'	=> 'I am the handle() method',
-		));
-
-		return $this->helper->render('foobar_body.html', 'handle()', 200);
-	}
-
-	/**
 	* Foo controller to be accessed with the URL is /example/{test}
 	* (where {test} is the placeholder for a value)
 	*
