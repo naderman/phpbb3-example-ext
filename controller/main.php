@@ -1,6 +1,6 @@
 <?php
 
-class phpbb_ext_naderman_example_controller_main implements phpbb_controller_interface
+class phpbb_ext_naderman_example_controller_main
 {
 	/**
 	* Constructor
