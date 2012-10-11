@@ -20,7 +20,7 @@ if (!defined('IN_PHPBB'))
 /**
 * @package acp
 */
-class phpbb_ext_example_acp_example_module
+class phpbb_ext_naderman_example_acp_example_module
 {
 	var $u_action;
 	var $new_config = array();

@@ -19,7 +19,7 @@ if (!defined('IN_PHPBB'))
 /**
 * @package VC
 */
-class phpbb_ext_example_captcha_my_gd_wave_plugin extends phpbb_captcha_plugins_captcha_abstract
+class phpbb_ext_naderman_example_captcha_my_gd_wave_plugin extends phpbb_captcha_plugins_captcha_abstract
 {
 
 	function __construct()

@@ -11,7 +11,7 @@
 /**
 * @package module_install
 */
-class phpbb_ext_example_acp_example_info
+class phpbb_ext_naderman_example_acp_example_info
 {
 	function module()
 	{
