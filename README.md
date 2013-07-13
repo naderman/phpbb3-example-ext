@@ -1,3 +1,11 @@
+# WARNING - THIS EXTENSION NO LONGER WORKS
+
+This was created as a test at the beginning of phpBB extensions and is not maintained anymore.
+
+You can check out the instructions on converting a MOD to a 3.1 extension in https://github.com/nickvergessen/howto-convert-phpbb30mod-to-phpbb31ext
+
+There's also a corresponding extension available at https://github.com/nickvergessen/phpbb3-mod-newspage/tree/develop-caitlyn
+
 # Example Extension
 
 ## Installation
